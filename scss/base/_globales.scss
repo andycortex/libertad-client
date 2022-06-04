@@ -1,0 +1,76 @@
+@import '../base/variables';
+html {
+    font-size: 62.5%;
+    // background-image: url('../../images/fondo-modificado.jpeg');
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    background: #fed700;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+        width: 1rem;
+    }
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: $color-primary;
+    }
+}
+* {
+    font-family: 'Amaranth', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all 0.2s linear;
+    
+}
+section {
+    padding: 5rem 10%;
+}
+.heading-link {
+    text-align: center;
+    // background: url(../../images/heading-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    h3 {
+        @include titleText(2.5rem);
+    }
+    p{
+        font-size: 1.5rem;
+        text-transform: capitalize;
+        color: $color-background;
+    }
+    a {
+        color: $color-primary;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+.heading {
+    text-align: center;
+    margin-bottom: 3rem;
+    @include titleText(3.5rem)
+}
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    border: $border;
+    background: $color-primary;
+    color: $color-white;
+    cursor: pointer;
+    text-transform: capitalize;
+
+    &:hover {
+        background: $color-secondary;
+    }
+}
+

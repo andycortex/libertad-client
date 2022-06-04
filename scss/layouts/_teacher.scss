@@ -1,0 +1,56 @@
+.teachers {
+    .slide {
+        text-align: center;
+        &:hover {
+            .image {
+                img {
+                    background: $color-background;
+                }
+                .share {
+                    bottom: 0;
+                }
+            }
+        }
+
+        .image {
+            position: relative;
+            overflow: hidden;
+
+            img {
+                background: $color-secondary;
+                width: 100%;
+            }
+            .share {
+                position: absolute;
+                bottom: -10rem;
+                left: 0;
+                right: 0;
+                background: rgba(0, 0, 0, .8);
+                padding: 2rem;
+                
+                .teacher-social-media {
+                    font-size: 2rem;
+                    margin: 0 1rem;
+                    color: $color-white;
+
+                    &:hover {
+                        color: $color-back;
+                    }
+                }
+            }
+        }
+        .content {
+            display: flex;
+            padding-top: 2rem;
+            align-items: center;
+            justify-content: space-between;
+            h3 {
+                @include titleText(2rem);
+                color: $color-primary;
+            }
+            span {
+                @include graphText(1.5rem);
+            }
+        }
+    }
+}
