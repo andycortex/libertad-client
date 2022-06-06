@@ -1,0 +1,100 @@
+.header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #FED700;
+    -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    padding: 2rem 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    z-index: 1000;
+}
+.header .logo {
+    margin-right: auto;
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    color: #1D2731;
+    font-weight: bolder;
+  }
+  .header .navbar {
+    position: relative;
+  }
+  .header .navbar .nav-link {
+    margin-right: 2rem;
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: #02022D;
+    font-weight: bold;
+  }
+  
+  .header .navbar .nav-link:hover {
+    color: #0B3C5D;
+  }
+  .header .icons .icons-users {
+    cursor: pointer;
+    font-size: 2.5rem;
+    color: #02022D;
+    margin-left: 1.5rem;
+  }
+  
+  .header .icons .icons-users:hover {
+    color: #0B3C5D;
+  }
+  .header #menu-btn {
+    display: none;
+  }
+@media (max-width: 1200px) {
+    .header {
+        padding: 2rem 5%;
+    }
+}
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+    .header {
+        padding: 2rem;
+    }
+}
+@media (max-width: 768px) {
+    .header #menu-btn {
+        display: inline-block;
+    }
+    .header .navbar {
+        position: fixed;
+        top: 0;
+        right: -105%;
+        width: 30rem;
+        background: #FED700;
+        height: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+        flex-flow: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        z-index: 1200;
+    }
+    .header .navbar.active {
+        -webkit-box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
+        box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
+        right: 0;
+    }
+    .header .navbar .nav-link {
+        display: block;
+        margin: 1rem 0;
+        text-align: center;
+        font-size: 3rem;
+    }
+}

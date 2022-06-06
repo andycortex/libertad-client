@@ -1,5 +1,7 @@
-function HomePage() {
-    return <div className="btn">hola como estas</div>
+function Home() {
+  return (
+    <div>Hola</div>
+  )
   }
   
-  export default HomePage
+  export default Home
