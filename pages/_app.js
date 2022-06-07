@@ -1,10 +1,12 @@
-import Header from '../components/Header'
+import Navbar from '../components/Navbar'
 import '../public/scss/app.scss'
-// This default export is required in a new `pages/_app.js` file.
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 export default function MyApp({ Component, pageProps }) {
     return (
       <>
-        <Header/>
+        <ToastContainer position='top-right'/>
+        <Navbar/>
         <Component {...pageProps} />
       </>
     ) 
