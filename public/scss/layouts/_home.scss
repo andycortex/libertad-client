@@ -1,0 +1,43 @@
+.home {
+  padding: 0;
+  .slide {
+    display: flex;
+    align-items: center;
+    height: 60rem;
+    background-size: cover !important;
+    background-position: center !important;
+
+    .content {
+      width: 50rem;
+      h3 {
+        @include titleText(5.5rem);
+        color: $color-white;
+      }
+      p {
+        @include graphText(1.6rem);
+        color: $color-white;
+        padding: 1rem 0;
+      }
+    }
+  }
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+  }
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+  }
+  .swiper-button-next  {
+    color: $color-secondary;
+  }
+  .swiper-button-prev {
+    color: $color-secondary;
+  }
+      
+}
+

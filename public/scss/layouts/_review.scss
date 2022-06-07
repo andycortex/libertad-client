@@ -1,0 +1,43 @@
+.review {
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    .slide {
+        text-align: center;
+        p {
+            @include graphText(1.5rem);
+            color: $color-white;
+            position: relative;
+            background: $color-secondary;
+            border: $border;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: -1.2rem;
+                left: 50%;
+                transform: translateX(-50%) rotate(45deg);
+                background: $color-secondary;
+                border-bottom: $border;
+                height: 2rem;
+                width: 2rem;
+            }
+        }
+        img {
+            height: 7rem;
+            width: 7rem;
+            border-radius: 50%;
+
+        }
+        h3 {
+            @include titleText(2.2rem);
+            padding: .5rem 0;
+        }
+        .starts {
+            font-size: 1.5rem;
+            color: $color-secondary;
+
+        }
+    }
+}
