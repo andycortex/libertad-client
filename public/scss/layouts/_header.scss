@@ -29,8 +29,12 @@
         cursor: pointer;
         color: $color-back;
         margin-left: 2rem;
+        .profile-icon {
+            font-size: 2rem;
+        }
         .icons-users {
-            font-size: 2.5rem;
+            font-size: 2rem;
+            margin-right: 1.8rem;
             &:hover {
                 color: $color-secondary;
             }

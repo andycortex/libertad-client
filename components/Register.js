@@ -1,25 +1,31 @@
-import React, { useState } from 'react'
-import axios from 'axios'
-import { toast } from 'react-toastify'
+import React, { useState } from 'react';
+import axios from 'axios';
+import { toast } from 'react-toastify';
+import LoadingButton from '@mui/lab/LoadingButton';
+
 
 const Register = () => {
-  const [name, setName] = useState('Andrea');
-  const [email, setEmail] = useState('andrea@email.com');
+  const [name, setName] = useState('Gustavo');
+  const [email, setEmail] = useState('gustavo@email.com');
   const [password, setPassword] = useState('123456');
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // console.table({name, email, password});
     try {
-      const {data} = await axios.post(`http://localhost:8000/api/register`, {
+      setLoading(true);
+      
+      const {data} = await axios.post(`/api/register`, {
         name,
         email,
         password,
       })
-      // console.log('REGISTER RESPONSE', data);
-      toast.dark('Registro existoso. Por favor ingresa al sistema')
+      toast.success('Registro existoso. Por favor ingresa al sistema')
+      setLoading(false);
+      
     } catch (err) {
-      toast.error(err.response.data)
+      toast.error(err.response.data);
+      setLoading(false);
     }
   }
 
@@ -35,7 +41,7 @@ const Register = () => {
             required
           />
           <input 
-            type='text' 
+            type='email' 
             placeholder='Introduzca su correo electronico' 
             className='box'
             value={email}
@@ -45,16 +51,17 @@ const Register = () => {
           <input 
             type='password' 
             placeholder='Introduzca su contraseña '
+            autoComplete='false'
             className='box'
             value={password}
             onChange={ (e) => setPassword(e.target.value)}
             required
           />
-          <input 
-            type='submit' 
-            value='Registrar'
-             className='btn'
-          />
+          {loading ?  
+            <LoadingButton className='btn' loading loadingIndicator="Loading..." variant="contained"> Ingresar</LoadingButton> 
+            : 
+            <button type='submit' className='btn' >Ingresar</button> }
+            
       </form>
   )
 }

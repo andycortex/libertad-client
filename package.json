@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev",
+    "dev": "node server.js",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -24,9 +24,12 @@
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
     "@mui/icons-material": "^5.8.2",
+    "@mui/lab": "^5.0.0-alpha.85",
     "@mui/material": "^5.8.2",
     "@mui/styled-engine-sc": "^5.8.0",
     "axios": "^0.27.2",
+    "express": "^4.18.1",
+    "http-proxy-middleware": "^2.0.6",
     "next": "^12.1.6",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",

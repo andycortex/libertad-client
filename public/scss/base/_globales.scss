@@ -68,7 +68,9 @@ section {
     color: $color-white;
     cursor: pointer;
     text-transform: capitalize;
-
+    .MuiLoadingButton-text {
+        color: $color-white;
+    }
     &:hover {
         background: $color-secondary;
     }
