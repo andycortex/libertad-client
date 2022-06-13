@@ -1,14 +1,11 @@
 .review {
-    
-    background-repeat: no-repeat;
-    background-size: cover;
     .slide {
         text-align: center;
         p {
             @include graphText(1.5rem);
-            color: $color-white;
+            color: $color-back;
             position: relative;
-            background: $color-secondary;
+            background: $color-general;
             border: $border;
             margin-bottom: 3rem;
             padding: 2rem;
@@ -33,10 +30,11 @@
         h3 {
             @include titleText(2.2rem);
             padding: .5rem 0;
+            color: $color-white;
         }
         .starts {
             font-size: 1.5rem;
-            color: $color-secondary;
+            color: $color-general;
 
         }
     }

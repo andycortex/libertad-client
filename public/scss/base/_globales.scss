@@ -1,10 +1,7 @@
 @import '../base/variables';
 html {
     font-size: 62.5%;
-    // background-image: url('../../images/fondo-modificado.jpeg');
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    background: #fed700;
+    // background: #fed700;
     overflow-x: hidden;
 
     &::-webkit-scrollbar {
@@ -14,7 +11,7 @@ html {
         background: transparent;
     }
     &::-webkit-scrollbar-thumb {
-        background: $color-primary;
+        background: $color-general;
     }
 }
 * {
@@ -30,6 +27,12 @@ html {
 }
 section {
     padding: 5rem 10%;
+}
+.background-blue {
+    background-image: url('../../../public/image/fondo.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    // background: #09256F;
 }
 .heading-link {
     text-align: center;
@@ -57,6 +60,12 @@ section {
     text-align: center;
     margin-bottom: 3rem;
     @include titleText(3.5rem)
+}
+.heading-tile {
+    text-align: center;
+    margin-bottom: 3rem;
+    @include titleText(3.5rem);
+    color: $color-white;
 }
 .btn {
     display: inline-block;

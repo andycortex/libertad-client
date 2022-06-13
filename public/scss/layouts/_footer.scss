@@ -38,6 +38,17 @@
                     text-decoration: underline;
                 }
             }
+            .footer-useful {
+                @include graphText(1.2rem);
+                color: $color-white;
+                padding: .5rem 0;
+                display: block;
+
+                &:hover {
+                    color: $color-white;;
+                    text-decoration: underline;
+                }
+            }
             p {
                 @include graphText(1.5rem);
                 padding: 1rem 1.2rem;

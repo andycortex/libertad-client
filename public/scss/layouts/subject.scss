@@ -7,7 +7,7 @@
         padding: 3rem 2rem;
         text-align: center;
         border: $border;
-        background: $color-secondary;
+        background: $color-general;
         cursor: pointer;
         margin-left: 2rem;
         height: 22rem;
@@ -29,12 +29,12 @@
         h3 {
             @include titleText(1.7rem);
             padding: .5rem 0;
-            color: $color-white;
+            color: $color-back;
         }
         p {
             font-size: 1.5rem;
             line-height: 2;
-            color: $color-white;
+            color: $color-back;
         }
       }
     }
