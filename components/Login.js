@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react'
+import React, { useState, useContext } from 'react'
 import Link from "next/link"
 import axios from 'axios';
 import { toast } from 'react-toastify';

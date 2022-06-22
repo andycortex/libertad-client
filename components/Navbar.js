@@ -13,14 +13,20 @@ import axios from 'axios'
 import { toast } from 'react-toastify';
 import { useRouter } from 'next/router';
 
-const initialState = {show: false};
+const initialState = {
+  show: false,
+};
 
 function reducer(state,action) {
   switch (action.type) {
     case 'LOGIN':
-      return {show: false};
+      return {
+        show: false,
+      };
     case 'REGISTER':
-      return {show: true };
+      return {
+        show: true,
+      };
     default: throw new Error(`Unknown action ${action.type}`);
   }
 }
@@ -57,7 +63,7 @@ const Navbar = () => {
               <p>libertad</p>
             </a>
           </Link>
-          <nav className={toogle ? "navbar active" : "navbar "}>
+          <nav className={toogle ? 'navbar active' : 'navbar '}>
             <CloseIcon className='close-nav' onClick={() => setToogle(!toogle)}/>
             <Link href='/'><a className='nav-link'>Inicio</a></Link>
             <Link href='/about'><a className='nav-link'>Nosotros</a></Link>
@@ -82,10 +88,10 @@ const Navbar = () => {
             }
             <MenuSharpIcon id='menu-btn'  className='icons-users' onClick={() => setToogle(!toogle)}/>
           </div>
-        </div>
+        </div> 
         {
           user === null && (
-            <div className={form ? "account-form active-form" : "account-form "}>  {/* active-from */}
+            <div className={ form ? 'account-form active-form' : 'account-form ' }>  {/* active-from */}
               <CloseIcon className='close-account' onClick={() => {setForm(!form)}}/>
               <div className='buttons'>
                 <button 
@@ -105,8 +111,9 @@ const Navbar = () => {
                     stateToogle.show ? <Register/> : <Login/>     
                   }
               </div>
-          </div>
-      )}
+            </div>
+          )
+        }
      </>
       )
   

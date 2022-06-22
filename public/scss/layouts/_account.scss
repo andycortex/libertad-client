@@ -26,7 +26,7 @@
         right: 0;
         font-size: 4rem;
         cursor: pointer;
-        color: $color-back;
+        color: $color-primary;
     }
     form {
         border: $border;
@@ -42,6 +42,7 @@
 
         h3{
             @include titleText(2.5rem);
+            color: $color-primary;
             padding-bottom: .5rem;
             text-transform: uppercase;
         }
@@ -60,17 +61,17 @@
 
             label {
                 font-size: 1.5rem;
-                color: $color-background;
+                color: $color-primary;
                 cursor: pointer;
             }
             .forgot-password {
                 font-size: 1.5rem;
-                color: $color-background;
+                color: $color-primary;
                 margin-left: auto;
 
                 &:hover {
                     text-decoration: underline;
-                    color: $color-primary;
+                    color: $color-secondary;
                 }
             }
         }
