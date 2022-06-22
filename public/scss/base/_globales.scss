@@ -1,7 +1,6 @@
 @import '../base/variables';
 html {
     font-size: 62.5%;
-    // background: #fed700;
     overflow-x: hidden;
 
     &::-webkit-scrollbar {
@@ -11,7 +10,7 @@ html {
         background: transparent;
     }
     &::-webkit-scrollbar-thumb {
-        background: $color-general;
+        background: $color-primary;
     }
 }
 * {
@@ -23,22 +22,12 @@ html {
     border: none;
     text-decoration: none;
     transition: all 0.2s linear;
-    
 }
 section {
     padding: 5rem 10%;
 }
-.background-blue {
-    background-image: url('../../../public/image/fondo.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    // background: #09256F;
-}
 .heading-link {
     text-align: center;
-    // background: url(../../images/heading-bg.jpg) no-repeat;
-    // background-size: cover;
-    // background-position: center;
 
     h3 {
         @include titleText(2.5rem);
@@ -65,7 +54,7 @@ section {
     text-align: center;
     margin-bottom: 3rem;
     @include titleText(3.5rem);
-    color: $color-white;
+    color: $color-background;
 }
 .btn {
     display: inline-block;
@@ -73,15 +62,9 @@ section {
     padding: 1rem 3rem;
     font-size: 1.8rem;
     border: $border;
-    background: $color-primary;
-    color: $color-white;
+    background: $color-secondary;
+    color: $color-background;
     cursor: pointer;
     text-transform: capitalize;
-    .MuiLoadingButton-text {
-        color: $color-white;
-    }
-    &:hover {
-        background: $color-secondary;
-    }
 }
 

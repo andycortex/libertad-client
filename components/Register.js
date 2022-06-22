@@ -5,8 +5,8 @@ import LoadingButton from '@mui/lab/LoadingButton';
 
 
 const Register = () => {
-  const [name, setName] = useState('Gustavo');
-  const [email, setEmail] = useState('gustavo@email.com');
+  const [name, setName] = useState('Andrea');
+  const [email, setEmail] = useState('andrea@email.com');
   const [password, setPassword] = useState('123456');
   const [loading, setLoading] = useState(false);
 

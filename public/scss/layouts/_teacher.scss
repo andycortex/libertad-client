@@ -1,4 +1,5 @@
 .teachers {
+    background: $color-white;
     .slide {
         text-align: center;
         &:hover {
@@ -17,7 +18,7 @@
             overflow: hidden;
 
             img {
-                background: $color-secondary;
+                background: $color-primary;
                 width: 100%;
             }
             .share {

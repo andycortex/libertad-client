@@ -6,7 +6,7 @@
         .box {
             h3{
                 @include titleText(2.2rem);
-                color: $color-white;
+                color: $color-primary;
                 padding: 1rem 0;
                 text-transform: uppercase;
             }
@@ -17,7 +17,7 @@
                     height: 4rem;
                     width: 7rem;
                     background-color: $color-background;
-                    color: $color-white;
+                    color: $color-primary;
                     margin-right: .3rem;
                     text-align: center;
 
@@ -29,30 +29,30 @@
             }
             .footer-link {
                 @include graphText(1.7rem);
-                color: $color-white;
+                color: $color-primary;
                 padding: .5rem 0;
                 display: block;
 
                 &:hover {
-                    color: $color-white;;
+                    color: $color-secondary;
                     text-decoration: underline;
                 }
             }
             .footer-useful {
                 @include graphText(1.2rem);
-                color: $color-white;
+                color: $color-primary;
                 padding: .5rem 0;
                 display: block;
 
                 &:hover {
-                    color: $color-white;;
+                    color: $color-secondary;
                     text-decoration: underline;
                 }
             }
             p {
                 @include graphText(1.5rem);
                 padding: 1rem 1.2rem;
-                color: $color-white;
+                color: $color-primary;
             }
             .email {
                 width: 100%;
@@ -68,7 +68,7 @@
         margin-top: 3rem;
         padding-top: 3rem;
         @include titleText(1.5rem);
-        color: $color-white;
+        color: $color-primary;
         border-top: $border;
     }
 }

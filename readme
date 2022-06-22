@@ -25,3 +25,23 @@ protect route
 * (browser will include cookie in header automatically)
 * if you get successful response then you can show the protected page to the user
 
+/**
+SETUP STRIPE PAYMENT
+ * use stripe connect (check support countries)
+ * receive payment from users
+ * automate the payment distribution
+ * 70% to sellers(instructors) and keeps 30% as platform fee
+ * get paid every 48 hours directly to bank account by stripe
+
+
+ /**
+ * how password reset works ?
+ * user will enter mail address
+ * you will find that user based on email address from db
+ * if found, you will create password reset code
+ * then you will save that code in database and also sen to that user's 
+ * if this is correct user, he will have access to his email
+ * he can copy that code and paste in the form, enter new password then hit submit
+ * on submit, our server receive the user's email and code
+ * you will try to find the user based on the email and code
+ * if found, update this old password with new one and reset code back to empty done

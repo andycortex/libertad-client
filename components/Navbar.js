@@ -68,7 +68,7 @@ const Navbar = () => {
             {
               user !== null ? (
                 <div className='logout-form'>
-                  <Link href='/'>
+                  <Link href='/user'>
                     <a className='icons-users'>
                       <AccountCircleSharpIcon className='profile-icon'/> 
                       { user && user.name }
@@ -85,25 +85,26 @@ const Navbar = () => {
         </div>
         {
           user === null && (
-          <div className={form ? "account-form active-form" : "account-form "}>  {/* active-from */}
-          <CloseIcon className='close-account' onClick={() => {setForm(!form)}}/>
-          <div className='buttons'>
-            <button 
-              className={ stateToogle.show ? 'btn login-btn ' : 'btn login-btn active' }
-              onClick={() =>dispatchToogle({type: 'LOGIN'})}
-            >
-              Ingresar
-            </button>
-            <button
-              className={ stateToogle.show ? 'btn register-btn active' : 'btn register-btn ' }
-              onClick={() =>dispatchToogle({type: 'REGISTER'})}
-            >
-              Registrar
-            </button>
-            {
-              stateToogle.show ? <Register/> : <Login/>     
-            }
-          </div>
+            <div className={form ? "account-form active-form" : "account-form "}>  {/* active-from */}
+              <CloseIcon className='close-account' onClick={() => {setForm(!form)}}/>
+              <div className='buttons'>
+                <button 
+                  className={ stateToogle.show ? 'btn login-btn ' : 'btn login-btn active' }
+                  onClick={() =>dispatchToogle({type: 'LOGIN'})}
+                >
+                  Ingresar
+                </button>
+                <button
+                  className={ stateToogle.show ? 'btn register-btn active' : 'btn register-btn ' }
+                  onClick={() =>dispatchToogle({type: 'REGISTER'})}
+                >
+                  Registrar
+                </button>
+                
+                  {
+                    stateToogle.show ? <Register/> : <Login/>     
+                  }
+              </div>
           </div>
       )}
      </>

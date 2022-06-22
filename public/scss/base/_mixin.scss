@@ -6,7 +6,7 @@
 @mixin titleText ($titleSize) {
     font-size: $titleSize;
     text-transform: capitalize;
-    color: $color-primary;
+    color: $color-background;
 }
 @mixin graphText ($graphSize) {
     font-size: $graphSize;

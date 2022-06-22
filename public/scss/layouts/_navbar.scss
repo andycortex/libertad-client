@@ -12,6 +12,7 @@
     .nav-link {
         margin-right: 2rem;
         @include titleText(2rem);
+        color: $color-primary;
     
         &:hover {
             color: $color-background;

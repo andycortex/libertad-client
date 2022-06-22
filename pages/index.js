@@ -2,6 +2,7 @@ import React from 'react';
 import Subject from '../components/Subject';
 import Review from '../components/Review';
 import Footer from '../components/Footer';
+import Link from 'next/link';
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -16,9 +17,10 @@ import "swiper/css/pagination";
 // import required modules
 import { EffectFade, Navigation } from 'swiper';
 
-import slideImage1 from '../public/image/home-slide-2.png';
+import slideImage1 from '../public/image/home-slide-2.jpg';
 import slideImage2 from '../public/image/home-slide-1.jpg';
 import slideImage3 from '../public/image/home-slide-3.jpg'
+import Teacher from '../components/Teacher';
 
 
 
@@ -40,34 +42,37 @@ function Home() {
                         <SwiperSlide>
                             <section className='slide' style={{ 
                               backgroundImage: `url(${slideImage1.src})`}}>
-                                {/* <div className='content'>
-                                <Link href="/"><a className='btn'>Empieza ya!!!</a></Link>
-                                </div> */}
+                                <div className='content'>
+                                  <h3>the best Review you will find find here!</h3>
+                                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas impedit labore dolore unde, quidem corrupti?</p>
+                                  <Link href="/"><a className='btn'>get started</a></Link>
+                                </div>
                             </section>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <section className='slide' style={{ backgroundImage: `url(${slideImage2.src})`}}>
-                                    {/* <div className='content'>
-                                    <Link href="/"><a className='btn'>Empieza ya!!!</a></Link>
-                                    </div> */}
-                                </section>
+                              <section className='slide' style={{ backgroundImage: `url(${slideImage2.src})`}}>
+                                <div className='content'>
+                                  <h3>the best Review you will find find here!</h3>
+                                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas impedit labore dolore unde, quidem corrupti?</p>
+                                  <Link href="/"><a className='btn'>get started</a></Link>
+                                </div>
+                              </section>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <section className='slide' style={{ backgroundImage: `url(${slideImage3.src})`}}>
-                                    <div className='content'>
-                                        {/* <div className='content'>
-                                              <Link href="/"><a className='btn'>Empieza ya!!!</a></Link>
-                                          </div> */}
-                                    </div>
+                                  <div className='content'>
+                                    <h3>the best Review you will find find here!</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas impedit labore dolore unde, quidem corrupti?</p>
+                                    <Link href="/"><a className='btn'>get started</a></Link>
+                                  </div>
                                 </section>
                         </SwiperSlide>
                     </Swiper>
                 </div>
             </div>
         </section>
-        <div className='background-blue'>
-          <section className='subjects'>
-            <h1 className='heading-tile'>Nuestros Cursos Populares</h1>
+        <section className='subjects'>
+          <h1 className='heading-tile'>Nuestros Cursos Populares</h1>
             <div className='box-container'>
               <Subject 
                 img='image/cash.png'
@@ -107,9 +112,8 @@ function Home() {
               />
             </div>
           </section>
-          {/* <Teacher/> */}
+          <Teacher />
           <Review/>
-        </div>
         <Footer/>
       </>
       
